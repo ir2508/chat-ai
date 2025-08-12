@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Button from "../Button"
 
-const AgentCardItem = () => {
+const AgentCardItem = ({ agentName }) => {
     const CardItemStyled = styled.div`
         box-sizing: border-box;
         border: 1px solid grey;
@@ -22,7 +22,7 @@ const AgentCardItem = () => {
     return (
         <CardItemStyled>
             <div>
-                <h4>Análise GPG</h4>
+                <h4>{agentName}</h4>
             </div>
             <div>
                 <Button btnStyle="sucess">Abrir</Button>

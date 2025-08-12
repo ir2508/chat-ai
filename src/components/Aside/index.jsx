@@ -23,9 +23,12 @@ const Aside = () => {
     return (
         <AsideBarStyled>
             <h1>SE - Agentes de IA</h1>
-            <AgentCardItem />
-            <AgentCardItem />
-            <AgentCardItem />
+            <AgentCardItem agentName="Criador de Épicos"/>
+            <AgentCardItem agentName="Histórias de Usuário"/>
+            <AgentCardItem agentName="Casos de Teste"/>
+            <AgentCardItem agentName="Requisitos Funcionais"/>
+            <AgentCardItem agentName="Requisitos Não Funcionais"/>
+            <AgentCardItem agentName="Análise"/>
         </AsideBarStyled>
     )
 }
