@@ -5,12 +5,13 @@ const AgentCardItem = () => {
     const CardItemStyled = styled.div`
         box-sizing: border-box;
         border: 1px solid grey;
-        border-radius: 5px;
+        border-radius: 7px;
         padding: 15px;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        
+        align-items: center;
+        background-color: #fff;
 
         h4 {
             padding: 0px;
@@ -22,7 +23,6 @@ const AgentCardItem = () => {
         <CardItemStyled>
             <div>
                 <h4>Análise GPG</h4>
-                <span>Última alteração: 10/08/2025</span>
             </div>
             <div>
                 <Button btnStyle="sucess">Abrir</Button>

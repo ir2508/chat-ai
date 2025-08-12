@@ -7,7 +7,7 @@ const ChatMessage = ({ children, req }) => {
         justify-content: ${req === "request" ? "flex-end" : "flex-start"};
         
         p {
-            background-color: #7c7c7c;
+            background-color: #E4E8F0;
             max-width: 70%;
             padding: 10px;
             border-radius: 5px;

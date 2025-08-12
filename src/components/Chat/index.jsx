@@ -11,6 +11,16 @@ const Chat = () => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        h3 {
+            color: #4f596f;
+            font-size: 1.4em;
+        }
+
+        .chat-messages {
+            overflow-y: auto;
+            scrollbar-color: #004A8D #F0F1F2;
+        }
     `
 
     return (
@@ -19,7 +29,15 @@ const Chat = () => {
                 <h3>Agente Análise GPG</h3>
             </header>
 
-            <div>
+            <div className="chat-messages">
+                <ChatMessage req="request">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="response">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="request">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="response">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="request">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="response">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="request">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
+                <ChatMessage req="response">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
                 <ChatMessage req="request">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
                 <ChatMessage req="response">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>
                 <ChatMessage req="request">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias quo facilis beatae recusandae accusantium dolor nam nisi iure modi nesciunt explicabo doloremque quidem culpa dolore minus fugit, maxime cum!</ChatMessage>

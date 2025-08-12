@@ -12,9 +12,11 @@ const Aside = () => {
         align-items: center;
         justify-content: flex-start; 
         gap: 10px;
+        background-color: #004A8D;
 
         h1 {
             font-size: 2em;
+            color: #fff;
         }
     `
 
