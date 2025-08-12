@@ -1,9 +1,15 @@
+import AgentCardItem from "../AgentCardItem"
+
 const Aside = () => {
     return (
-        <>
-            <h1>Soluções Educacionais - IA</h1>
-            <h4>Agentes</h4>
-        </>
+        <aside>
+            <h1>SE - Agentes de IA</h1>
+            <AgentCardItem />
+            <AgentCardItem />
+            <AgentCardItem />
+            <AgentCardItem />
+            <AgentCardItem />
+        </aside>
     )
 }
 

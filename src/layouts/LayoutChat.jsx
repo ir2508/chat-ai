@@ -11,7 +11,7 @@ const LayoutChat = () => {
             <Aside /> 
 
             <main>
-                sa
+                <h2>Chat atual</h2>
             </main>
         </DivContainerStyled>
     )
