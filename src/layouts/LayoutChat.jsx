@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Aside from "../components/Aside"
+import Chat from "../components/Chat"
 
 const LayoutChat = () => {
     const DivContainerStyled = styled.div`
@@ -11,7 +12,7 @@ const LayoutChat = () => {
             <Aside /> 
 
             <main>
-                <h2>Chat atual</h2>
+                <Chat />
             </main>
         </DivContainerStyled>
     )

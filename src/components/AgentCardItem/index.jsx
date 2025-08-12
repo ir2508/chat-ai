@@ -3,12 +3,14 @@ import Button from "../Button"
 
 const AgentCardItem = () => {
     const CardItemStyled = styled.div`
+        box-sizing: border-box;
         border: 1px solid grey;
         border-radius: 5px;
         padding: 15px;
         width: 100%;
         display: flex;
         justify-content: space-between;
+        
 
         h4 {
             padding: 0px;
