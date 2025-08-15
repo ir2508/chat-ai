@@ -15,10 +15,13 @@ export const ChatHistoryProvider = ({ children }) => {
             message: "Olá seja bem vindo, para iniciar a conversa basta escrever e enviar uma mensagem!",
         }
     ])
+    const [messageToRequest, setMessageToRequest] = useState()
+    const [loading, setLoading] = useState(false)
     const [requests, setRequests] = useState([])
     const [responses, setResponses] = useState([])
 
     function newRequest(message) {
+        setLoading(true)
         const now = new Date()
 
         if (message.lenght <= 4) {
@@ -54,12 +57,16 @@ export const ChatHistoryProvider = ({ children }) => {
                 }
                 setResponses((prevResponses) => [...prevResponses, newResponse])
                 setHistory((prevHistory) => [...prevHistory, newResponse])
+                setLoading(false)
             }
             )
 
+        setMessageToRequest("")
+    }
 
+    function searchWithAI() {
 
     }
 
-    return <ChatHistoryContext.Provider value={{ setRequests, history, setHistory, newRequest }}>{children}</ChatHistoryContext.Provider>
+    return <ChatHistoryContext.Provider value={{ setRequests, history, setHistory, newRequest, messageToRequest, setMessageToRequest, loading }}>{children}</ChatHistoryContext.Provider>
 }

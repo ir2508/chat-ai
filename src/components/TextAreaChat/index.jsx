@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import Button from "../Button"
-import { useState } from "react"
+import { useContext } from "react"
+import { ChatHistoryContext } from "../../contexts/ChatHistoryContext"
 
 const ContainerDivRequest = styled.div`
-    max-width: 1000px;
+    /* max-width: 1000px; */
     padding: 10px;
     display: flex;
     align-items: center;
@@ -21,7 +22,7 @@ const ContainerDivRequest = styled.div`
     }
 `
 const TextAreaChat = () => {
-    const [messageToRequest, setMessageToRequest] = useState()
+    const { messageToRequest, setMessageToRequest } = useContext(ChatHistoryContext)
 
     function onChangeHandler(e) {
         setMessageToRequest(e)

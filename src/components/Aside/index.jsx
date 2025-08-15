@@ -2,10 +2,8 @@ import styled from "styled-components"
 import AgentCardItem from "../AgentCardItem"
 
 const AsideBarStyled = styled.aside`
-    height: 100vh;
     border-right: 1px solid #646464;
     padding: 0 30px;
-    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;

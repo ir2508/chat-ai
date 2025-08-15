@@ -1,15 +1,14 @@
 import styled from "styled-components"
 
 const DivMessageBalloonStyled = styled.div`
-    padding: 10px;
     display: flex;
     justify-content: ${({ $req }) => ($req === "request" ? "flex-end" : "flex-start")};
 
     p {
         background-color: #d5fad4;
-        max-width: 70%;
+        max-width: 80%;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 `
 const ChatMessage = ({ children, req }) => {

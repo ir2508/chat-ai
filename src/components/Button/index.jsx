@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { ChatHistoryContext } from "../../contexts/ChatHistoryContext"
 
 const ButtonStyled = styled.button`
-    background-color: ${({ $btnStyle }) => ($btnStyle === "success" ? "#8ef58b" : "#AD2E2C")};
+    background-color: ${({ $btnStyle }) => ($btnStyle === "success" ? "#06402B" : "#AD2E2C")};
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -11,7 +11,7 @@ const ButtonStyled = styled.button`
     cursor: pointer;
 
     &:hover {
-        box-shadow: 1px 1px 10px #8ef58b;
+        box-shadow: 1px 1px 10px #06402B;
     }
 `
 const Button = ({ children, btnStyle, buttonType, requestMessage }) => {

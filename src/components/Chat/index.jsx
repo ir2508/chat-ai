@@ -4,15 +4,15 @@ import ChatMessage from "../ChatMessage"
 import { useContext } from "react"
 import { ChatHistoryContext } from "../../contexts/ChatHistoryContext"
 import Markdown from "react-markdown"
+import MessageLoading from "../MessageLoading"
 
 const ContainerChatStyled = styled.div`
     /* border: 1px solid #646464; */
-    min-width: 700px;
-    max-width: 1000px;
-    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    
 
     h3 {
         color: #4f596f;
@@ -21,11 +21,14 @@ const ContainerChatStyled = styled.div`
 
     .chat-messages {
         overflow-y: auto;
-        scrollbar-color: #79f775 #f0f1f2;
+        scrollbar-color: #06402B #f0f1f2;
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
     }
 `
 const Chat = () => {
-    const { history } = useContext(ChatHistoryContext)
+    const { history, loading } = useContext(ChatHistoryContext)
 
     return (
         <ContainerChatStyled>
@@ -42,6 +45,7 @@ const Chat = () => {
             </div>
 
             <footer>
+                {loading ? <MessageLoading>Aguarde enquanto estamos gerando uma resposta...</MessageLoading> : ""}
                 <TextAreaChat />
             </footer>
         </ContainerChatStyled>
