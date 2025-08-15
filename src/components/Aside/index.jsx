@@ -11,7 +11,7 @@ const AsideBarStyled = styled.aside`
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    background-color: #004a8d;
+    background-color: #8fbbaf;
 
     h1 {
         font-size: 2em;
@@ -21,7 +21,7 @@ const AsideBarStyled = styled.aside`
 const Aside = () => {
     return (
         <AsideBarStyled>
-            <h1>SE - Agentes de IA</h1>
+            <h1>Agentes de IA</h1>
             <AgentCardItem agentName="Criador de Épicos" />
             <AgentCardItem agentName="Histórias de Usuário" />
             <AgentCardItem agentName="Casos de Teste" />

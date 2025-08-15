@@ -28,7 +28,7 @@ const TextAreaChat = () => {
     }
     return (
         <ContainerDivRequest>
-            <textarea onChange={(e) => { onChangeHandler(e.target.value)}}></textarea>
+            <textarea value={messageToRequest} onChange={(e) => { onChangeHandler(e.target.value) }}></textarea>
             <Button btnStyle="success" buttonType="submitToChat" requestMessage={messageToRequest}>Enviar</Button>
         </ContainerDivRequest>
     )

@@ -3,6 +3,7 @@ import TextAreaChat from "../TextAreaChat"
 import ChatMessage from "../ChatMessage"
 import { useContext } from "react"
 import { ChatHistoryContext } from "../../contexts/ChatHistoryContext"
+import Markdown from "react-markdown"
 
 const ContainerChatStyled = styled.div`
     /* border: 1px solid #646464; */
@@ -20,7 +21,7 @@ const ContainerChatStyled = styled.div`
 
     .chat-messages {
         overflow-y: auto;
-        scrollbar-color: #004a8d #f0f1f2;
+        scrollbar-color: #79f775 #f0f1f2;
     }
 `
 const Chat = () => {
@@ -29,13 +30,15 @@ const Chat = () => {
     return (
         <ContainerChatStyled>
             <header>
-                <h3>Agente para Criar Histórias de Usuário</h3>
+                <h3>Google Gemini Pro</h3>
             </header>
 
             <div className="chat-messages">
-                {history.map((eachMessage) => (
-                    <ChatMessage key={eachMessage.id} req={eachMessage.type}>{eachMessage.message}</ChatMessage>
-                ))}
+                {history.map((eachMessage) => {
+                    return eachMessage.type === "request" ?
+                        <ChatMessage key={eachMessage.id} req={eachMessage.type}>{eachMessage.message}</ChatMessage> :
+                        <ChatMessage key={eachMessage.id} req={eachMessage.type}><Markdown>{eachMessage.message}</Markdown></ChatMessage>
+                })}
             </div>
 
             <footer>

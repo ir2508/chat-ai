@@ -6,7 +6,7 @@ const DivMessageBalloonStyled = styled.div`
     justify-content: ${({ $req }) => ($req === "request" ? "flex-end" : "flex-start")};
 
     p {
-        background-color: #e4e8f0;
+        background-color: #d5fad4;
         max-width: 70%;
         padding: 10px;
         border-radius: 5px;
