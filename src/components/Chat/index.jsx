@@ -34,7 +34,7 @@ const Chat = () => {
 
             <div className="chat-messages">
                 {history.map((eachMessage) => (
-                    <ChatMessage req={eachMessage.type}>{eachMessage.message}</ChatMessage>
+                    <ChatMessage key={eachMessage.id} req={eachMessage.type}>{eachMessage.message}</ChatMessage>
                 ))}
             </div>
 

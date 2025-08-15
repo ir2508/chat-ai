@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { ChatHistoryContext } from "../../contexts/ChatHistoryContext"
 
 const ButtonStyled = styled.button`
-    background-color: ${({ btStyle }) => (btStyle === "sucess" ? "#0F6FFF" : "#AD2E2C")};
+    background-color: ${({ $btnStyle }) => ($btnStyle === "success" ? "#0F6FFF" : "#AD2E2C")};
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -26,7 +26,7 @@ const Button = ({ children, btnStyle, buttonType, requestMessage }) => {
         setRequests((prevRequests) => [...prevRequests, newRegister])
     }
 
-    return <ButtonStyled btStyle={btnStyle}>{children}</ButtonStyled>
+    return <ButtonStyled $btnStyle={btnStyle}>{children}</ButtonStyled>
 }
 
 export default Button

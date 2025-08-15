@@ -24,7 +24,7 @@ const AgentCardItem = ({ agentName }) => {
                 <h4>{agentName}</h4>
             </div>
             <div>
-                <Button btnStyle="sucess">Abrir</Button>
+                <Button btnStyle="success">Abrir</Button>
             </div>
         </CardItemStyled>
     )

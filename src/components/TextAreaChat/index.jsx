@@ -29,7 +29,7 @@ const TextAreaChat = () => {
     return (
         <ContainerDivRequest>
             <textarea onChange={(e) => { onChangeHandler(e.target.value)}}></textarea>
-            <Button btnStyle="sucess" buttonType="submitToChat" requestMessage={messageToRequest}>Enviar</Button>
+            <Button btnStyle="success" buttonType="submitToChat" requestMessage={messageToRequest}>Enviar</Button>
         </ContainerDivRequest>
     )
 }

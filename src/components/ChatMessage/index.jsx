@@ -3,7 +3,7 @@ import styled from "styled-components"
 const DivMessageBalloonStyled = styled.div`
     padding: 10px;
     display: flex;
-    justify-content: ${({reqType}) => (reqType === "request" ? "flex-end" : "flex-start")};
+    justify-content: ${({ $req }) => ($req === "request" ? "flex-end" : "flex-start")};
 
     p {
         background-color: #e4e8f0;
@@ -14,7 +14,7 @@ const DivMessageBalloonStyled = styled.div`
 `
 const ChatMessage = ({ children, req }) => {
     return (
-        <DivMessageBalloonStyled reqType={req}>
+        <DivMessageBalloonStyled $req={req}>
             <p>{children}</p>
         </DivMessageBalloonStyled>
     )
