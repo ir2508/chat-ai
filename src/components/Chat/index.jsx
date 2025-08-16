@@ -24,6 +24,7 @@ const ContainerChatStyled = styled.div`
         scrollbar-color: #06402B #f0f1f2;
         display: flex;
         flex-direction: column;
+        gap: 30px;
         padding-right: 20px;
     }
 `
@@ -33,14 +34,14 @@ const Chat = () => {
     return (
         <ContainerChatStyled>
             <header>
-                <h3>Google Gemini Pro</h3>
+                <h3>Google Gemini Flash</h3>
             </header>
 
             <div className="chat-messages">
                 {history.map((eachMessage) => {
                     return eachMessage.type === "request" ?
-                        <ChatMessage key={eachMessage.id} req={eachMessage.type}>{eachMessage.message}</ChatMessage> :
-                        <ChatMessage key={eachMessage.id} req={eachMessage.type}><Markdown>{eachMessage.message}</Markdown></ChatMessage>
+                        <ChatMessage key={eachMessage.id} req={eachMessage.type} dateTime={eachMessage.timestamp}>{eachMessage.message}</ChatMessage> :
+                        <ChatMessage key={eachMessage.id} req={eachMessage.type} dateTime={eachMessage.timestamp}><Markdown>{eachMessage.message}</Markdown></ChatMessage>
                 })}
             </div>
 

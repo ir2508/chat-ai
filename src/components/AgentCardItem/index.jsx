@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Button from "../Button"
+import { Link } from "react-router-dom"
 
 const CardItemStyled = styled.div`
     box-sizing: border-box;
@@ -16,15 +17,22 @@ const CardItemStyled = styled.div`
         padding: 0px;
         margin: 0px;
     }
+
+    span {
+        font-size: 0.8em;
+    }
 `
-const AgentCardItem = ({ agentName }) => {
+const AgentCardItem = ({ agentName, read, redirectTo }) => {
     return (
         <CardItemStyled>
             <div>
                 <h4>{agentName}</h4>
+                {read ? "" : <span>Em desenvolvimento!</span>}
             </div>
             <div>
-                <Button btnStyle="success">Abrir</Button>
+                <Link to={redirectTo}>
+                    <Button btnStyle="success">Abrir</Button>
+                </Link>
             </div>
         </CardItemStyled>
     )

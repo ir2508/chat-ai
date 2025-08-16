@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Aside from "../components/Aside"
 import Chat from "../components/Chat"
+import { Outlet } from "react-router-dom"
 
 const DivContainerStyled = styled.div`
         display: flex;
@@ -26,7 +27,7 @@ const LayoutChat = () => {
             <Aside />
 
             <main>
-                <Chat />
+                <Outlet />
             </main>
         </DivContainerStyled>
     )

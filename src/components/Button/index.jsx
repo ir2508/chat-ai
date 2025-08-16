@@ -14,7 +14,7 @@ const ButtonStyled = styled.button`
         box-shadow: 1px 1px 10px #06402B;
     }
 `
-const Button = ({ children, btnStyle, buttonType, requestMessage }) => {
+const Button = ({ children, btnStyle, requestMessage }) => {
     const { newRequest } = useContext(ChatHistoryContext)
 
     function handleSendMessage(requestMessage) {
