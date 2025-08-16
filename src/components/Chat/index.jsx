@@ -7,13 +7,11 @@ import Markdown from "react-markdown"
 import MessageLoading from "../MessageLoading"
 
 const ContainerChatStyled = styled.div`
-    /* border: 1px solid #646464; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     
-
     h3 {
         color: #4f596f;
         font-size: 1.4em;
@@ -26,6 +24,10 @@ const ContainerChatStyled = styled.div`
         flex-direction: column;
         gap: 30px;
         padding-right: 20px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        max-height: 800px;
     }
 `
 const Chat = () => {

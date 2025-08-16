@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import AgentCardItem from "../AgentCardItem"
-import { Link } from "react-router-dom"
 
 const AsideBarStyled = styled.aside`
     border-right: 1px solid #646464;
@@ -11,10 +10,6 @@ const AsideBarStyled = styled.aside`
     justify-content: flex-start;
     gap: 10px;
     background-color: #8fbbaf;
-
-    Link {
-
-    }
 
     h1 {
         font-size: 2em;

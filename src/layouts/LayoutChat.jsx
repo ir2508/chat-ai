@@ -20,6 +20,21 @@ const DivContainerStyled = styled.div`
             height: 100vh;
             padding: 10px 50px 50px 10px;
         }
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            width: auto;
+
+            Aside {
+                padding-bottom: 50px;
+                box-sizing: border-box;
+            }
+
+            main {
+                height: 1800px;
+                padding: 50px;
+            }
+        }
     `
 const LayoutChat = () => {
     return (
